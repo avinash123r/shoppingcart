@@ -10,7 +10,7 @@ import { Route, Link, BrowserRouter as Router,Switch } from 'react-router-dom';
 
 
 const routing = (
-  <Router>
+  <Router basename="/shoppingcart/">
   	<Switch>
     
       <Route exact  path="/" component={App} />
