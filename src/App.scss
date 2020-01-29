@@ -1,0 +1,606 @@
+@import './util/variables.scss';
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $lightWhite;
+  font-family: 'Verdana';
+  font-size:15px
+}
+
+hr{
+  border-top: 1px solid $colorLightGray;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+ /* The Radio Box Container*/
+ .radiobox-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radiobox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: $colorWhite;
+  border-radius: 50%;
+  border: 2px solid $lightWhite;
+}
+
+/* On mouse-over, add a grey background color */
+.radiobox-container:hover input ~ .checkmark {
+  background-color: $colorLightGray;
+}
+
+/* When the radio button is checked, add a blue background */
+.radiobox-container input:checked ~ .checkmark {
+  background-color: $colorWhite;
+  border:2px solid $colorDarkBlue;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radiobox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radiobox-container .checkmark:after {
+ 	top: 4px;
+	left: 4px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: $colorDarkBlue;
+}
+
+
+/***********Header CSS***************/
+header{
+  background: $colorBlue;
+  color: $colorWhite;
+  min-height: 60px;
+}
+
+header h1 a{
+  font-size:30px;
+  color:$colorYellow;
+}
+
+header a{
+  color: $colorWhite;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+header li{
+  display: inline;
+  padding: 0 8px 0 8px;
+}
+
+header #branding {
+  float: left;
+  padding: 8px 0;
+}
+
+header #branding h1{
+  margin: 0;
+}
+
+header nav{
+  float: right;
+ padding: 15px 0;
+}
+
+header .highlight, header .current a {
+  color: $colorBlue;
+  font-weight: bold;
+}
+
+header a:hover{
+  color: $colorLightGray;
+  font-weight: bold;
+}
+
+.badge1 {
+  position:relative;
+}
+
+.badge1[data-badge]:after {
+  content:attr(data-badge);
+  position:absolute;
+  top: -8px;
+  right: -5px;
+  font-size: 0.7em;
+  background: $colorLightRed;
+  color: $colorWhite;
+  width: 15px;
+  height: 15px;
+  text-align:center;
+  line-height:18px;
+  border-radius:50%;
+  box-shadow:0 0 1px #333;
+}
+
+
+/*******Left Sidebar Css************/
+.filtersidebar{
+  padding:5px;
+}
+.filtersidebar h3{
+  color: $colorBlack;
+  font-size: 16px;
+  margin: 0px;
+}
+.filtersidebar p{
+  margin: 35px 0px;
+}
+
+
+/*******Right sidebar for product price details***********/
+.totals{
+  padding:10px;
+  height: 60px;
+}
+
+.total-payable{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid $colorBlack;
+    padding: 26px 10px;
+}
+
+.totals .totals-item {
+    float: right;
+    clear: both;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.totals .totals-item label {
+    float: left;
+    clear: both;
+    text-align: right;
+    color: $colorLightGray;
+}
+
+.totals .totals-item .totals-value {
+    float: right;
+    text-align: right;
+    color: $colorLightGray;
+}
+
+/*************Product display CSS*****************/
+#boxes{
+  margin-top: 20px;
+}
+
+.box{
+  float:left;
+  text-align: center;
+  width: 18.8%;
+  padding: 5px;
+  margin-top:15px;
+}
+
+.pricedetail h5{
+  padding: 8px;
+    color: gray;
+}
+
+.pricedetail{
+  height: 200px;
+  border: #cccccc solid 1px;
+    background: #fff;
+}
+
+#sortby{
+  margin-top:10px;
+}
+
+#sortby ul li{
+  display: inline;
+  padding: 0 8px 0 8px;
+}
+
+#sortby a{
+  color: #909090;
+  text-decoration: none;
+  
+  font-size: 14px;
+}
+
+#sortby span{
+  font-size:16px;
+  font-weight: bold;
+}
+
+
+.styles_modal__gNwvD{
+  padding: 0px !important;
+  margin-top: 8% !important;
+}
+
+/* Sidebar */
+aside#sidebar {
+  float: left;
+  width: 12%;
+  padding: 5px;
+}
+aside#sidebarright {
+  float: right;
+  width: 19%;
+  
+  
+    margin-top: 16px;
+}
+
+article#cart-col{
+  float: left;
+  width: 80%;
+  margin-top: 10px;
+}
+
+
+
+article#main-col{
+  float: right;
+  width: 86%;
+}
+
+article#box{
+  float: left;
+  width: 65%;
+}
+
+aside#sidebar input, aside#sidebar textarea {
+  width: 88%;
+  padding: 5px;
+}
+
+
+ul#item-lists li{
+  list-style: none;
+  padding: 5px;
+  border: #cccccc solid 1px;
+  margin: 5px;
+  background: #fff;
+}
+ul#item-lists a{
+  color: $colorBlack;
+  text-decoration: none;
+}
+
+
+
+.box img{
+      display: block;
+    height: auto;
+    width: 100%;
+}
+
+.img{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: -12%;
+}
+.item-detail{
+  padding:5px;
+}
+
+.input-range__track--active {
+    background: $colorBlue !important;
+}
+
+.input-range__slider {
+  background: $colorWhite !important;
+  border: 1px solid $colorGray !important;
+}
+
+.text-white{
+  color:$colorWhite !important;
+}
+
+#item-lists h4{
+  font-weight: normal;
+}
+.product-counter{
+  display: flex;
+    align-items: center;
+}
+
+.icon-color{
+      font-size: 25px !important;
+    background: $colorWhite;
+    background-color: $colorWhite;
+    color: $colorGray;
+}
+
+
+input.qty {
+    text-align: center;
+    width: 35px;
+    padding: 4px;
+    margin: 6px;
+    font-size: 16px;
+
+}
+
+.button {
+  background-color: $colorYellow;
+  border: none;
+  border-radius:15px;
+  color: $colorBlack;
+  padding: 4px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.nomargin{
+  margin:0px;
+}
+.text-right{
+  text-align:right;
+}
+.text-left{
+  text-align:left;
+}
+.text-center{
+  text-align:center;
+}
+.item-text1{
+  padding:3px;
+  color:$colorGray;
+  font-weight: normal;
+      font-size: 16px;
+}
+.item-text2{
+  padding:3px;
+  color:$colorBlack;
+  font-size:16px;
+}
+.item-text3{
+  padding:3px;
+}
+
+.strip{
+  text-decoration: line-through;
+    color: $colorLightGray;
+    opacity: .5;
+    font-size:14px;
+}
+
+.offer{
+  color:$colorGreen;
+  font-size: 14px;
+    font-weight: bold;
+}
+
+/*************Sort By Css**************/
+.filter-main{
+  display: flex;
+  border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    border-color: #ccc;
+
+}
+.filter-first{
+  display: flex;
+  flex:1;
+  border-width: 0px 1px 0px 0px;
+  border-color: #ccc;
+  border-style: inset;
+  justify-content: center;
+  padding: 12px 0px;
+  font-weight: bold;
+  cursor: pointer;
+  
+
+}
+
+.filter-second{
+  display: flex;
+  flex:1;
+  justify-content: center;
+  padding: 12px 0px;
+  font-weight: bold;
+  cursor: pointer;
+  
+
+}
+
+
+
+.hide-md{
+    display: none;
+  }
+
+ 
+
+
+/*******************Modal Box************************/
+  #modalContent{
+    width: 225px;
+    padding: 10px;
+  }
+  
+  #modalContent ul li{
+    color:$colorLightGray;
+    list-style: none;
+  }
+
+  #modalHeader{
+    padding: 10px;
+    color:$colorGray;
+  }
+
+  #modalFooter{
+    display: flex;
+    border:1px solid $lightWhite;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    color:$colorBlue;
+  }
+
+  #modalFooter .button1{
+    flex: 1;
+    border-width: 0px 1px 0px 0px;
+    border-color: $lightWhite;
+    border-style: solid;
+    padding: 5px;
+  }
+  #modalFooter .button2{
+    flex: 1;
+    padding: 5px;
+  }
+
+  /**********Footer CSS***************/
+
+  footer{
+    margin-top: 200px;
+    color: $colorWhite;
+    background-color: $colorBlue;
+    text-align: center;
+    min-height: 35px;
+    position: fixed;
+    
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width:100%;
+  }
+  footer p{
+      margin: 0;
+      padding: 6px 0;
+  }
+
+  
+
+
+@media(max-width: 768px){
+  article#cart-col,
+  aside#sidebarright,
+  article#main-col,
+  aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  .hide-sm{
+    display: none;
+  }
+  .styles_modal__gNwvD{
+    padding: 0px !important;
+    margin-top: 8% !important;
+  }
+  .container{
+    width: 100%;
+  
+  }
+
+  header h1{
+    font-size:35px;
+    color:$colorYellow;
+  }
+  .hide-md{
+    display: block;
+  }
+
+  .box{
+    float:left;
+    text-align: center;
+    margin-top:0px;
+    width: 47.69%;
+    padding: 10px 4px;
+    
+    border-width: 0px 0px .5px .1px;
+    border-color: #ccc;
+    border-style: solid;
+  }
+
+  header a{
+    color: $colorWhite;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+  .flex-container{
+    margin-left: 0px;
+  }
+
+  .pricedetail{
+    margin: 10px;;
+  }
+  #item-lists{
+    margin:5px;
+  }
+
+  header #branding {
+    
+    padding: 8px 15px;
+}
+
+
+
+header nav {
+  
+  padding: 15px;
+}
+
+
+
+ 
+
+  
+}
