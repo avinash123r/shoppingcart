@@ -22,14 +22,7 @@ class App extends React.Component {
   }
   
   componentDidMount() {
-     if (JSON.parse(localStorage.getItem("cartItems")).length > 0) {
-       Object.assign(this.cartItems,JSON.parse(localStorage.getItem("cartItems")));
-      this.setState({
-        count:this.cartItems.length
-      });
-       
      
-    }
     
    
     fetch('https://api.myjson.com/bins/qzuzi')
